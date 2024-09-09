@@ -64,7 +64,8 @@ jobs:
     - name: Clone openwrt-packages code
       run: |
         cd openwrt/package &&  git clone https://github.com/shadowsocks/shadowsocks-libev.git   
-
+        cd openwrt/package &&  git clone https://github.com/douglarek/luci-app-homeproxy.git
+        
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
