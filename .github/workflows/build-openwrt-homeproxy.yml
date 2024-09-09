@@ -61,10 +61,13 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
-    - name: Clone openwrt-packages code
+
+    - name: Clone homeproxy code
       run: |
-        cd openwrt/package &&  git clone https://github.com/shadowsocks/shadowsocks-libev.git   
         cd openwrt/package &&  git clone https://github.com/douglarek/luci-app-homeproxy.git
+        
+    - name: Clone ddns-go code
+      run: |
         cd openwrt/package &&  git clone https://github.com/sirpdboy/luci-app-ddns-go.git
         
     - name: Load custom feeds
