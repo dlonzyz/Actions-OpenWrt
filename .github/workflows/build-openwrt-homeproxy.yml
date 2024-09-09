@@ -65,6 +65,7 @@ jobs:
       run: |
         cd openwrt/package &&  git clone https://github.com/shadowsocks/shadowsocks-libev.git   
         cd openwrt/package &&  git clone https://github.com/douglarek/luci-app-homeproxy.git
+        cd openwrt/package &&  git clone https://github.com/sirpdboy/luci-app-ddns-go.git
         
     - name: Load custom feeds
       run: |
