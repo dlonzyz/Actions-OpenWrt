@@ -61,6 +61,9 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
+    - name: Clone openwrt-packages code
+      run: |
+        cd openwrt/package &&  git clone https://github.com/shadowsocks/shadowsocks-libev.git   
 
     - name: Load custom feeds
       run: |
